@@ -1,0 +1,14 @@
+{
+  "fotos": [
+    {
+      "url": "https://cdn.pixabay.com/photo/2023/08/11/10/13/goat-8183257_640.png",
+      "titulo": "Foto",
+      "id": 1
+    },
+    {
+      "url": "https://cdn.pixabay.com/photo/2023/07/10/06/52/trail-8117575_640.jpg",
+      "titulo": "Foto2",
+      "id": 2
+    }
+  ]
+}
