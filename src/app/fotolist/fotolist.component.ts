@@ -1,20 +1,31 @@
-import { Component } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Component, OnInit } from '@angular/core';
+import { Fotos } from '../model/foto.model';
 
 @Component({
   selector: 'app-fotolist',
   templateUrl: './fotolist.component.html',
   styleUrls: ['./fotolist.component.css']
 })
-export class FotolistComponent {
+
+/* 
+  OnInit 
+    -Faz parte do clico de vida do angular 
+    -Tudo que estiver dentro dele será executado automaticamente quando o componente for inciado
+    - Ele precisa ser implementado - Declarar na classe    
+*/
+export class FotolistComponent implements OnInit {
   
   /* Meu array de fotos */
-  minhasFotos = [
-    {titulo: 'Aurora', url: 'https://cdn.pixabay.com/photo/2023/04/11/16/04/solar-wind-7917659_1280.jpg'},
-    {titulo: 'Fogos', url: 'https://cdn.pixabay.com/photo/2023/07/27/03/27/fireworks-8152353_640.jpg'},
-    {titulo: 'Animal', url: 'https://cdn.pixabay.com/photo/2023/05/30/15/39/fox-squirrel-8028963_640.jpg'},
-    {titulo: 'Passáro', url: 'https://cdn.pixabay.com/photo/2023/06/18/04/57/grey-capped-flycatcher-8071233_640.jpg'},
-    {titulo: 'Sapo', url: 'https://cdn.pixabay.com/photo/2023/07/26/15/38/frog-8151540_640.jpg'},
-    {titulo: 'Bicicleta', url: 'https://cdn.pixabay.com/photo/2023/07/28/15/14/wall-8155414_640.jpg'},
+  minhasFotos:Fotos[] = [];
 
-  ]
+  /* Injeção da dependencia do httpclient 
+    é uma boa pratica do Angular deixar o construtor somente para injeção de dependecia
+  */
+  constructor(private http: HttpClient){}
+  
+  /* Método responsavel por carregar tudo dentro dele na inicialização do componente */
+  ngOnInit(): void {
+    this.http.get<Fotos[]>('http://localhost:3000/fotos').subscribe(caixinha => this.minhasFotos = caixinha );
+  }
 }
