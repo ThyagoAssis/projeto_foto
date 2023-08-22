@@ -14,11 +14,7 @@ export class FormularioComponent {
   };
 
   nameButton = "Enviar";
-  dados = {
-    titulo: "",
-    url: ""
-  };
-
+ 
   /* 
     Injeção de dependencia - é quando nossa aplicação depende de uma ferramenta para realizar alguma tarefa 
     Para fazer a injeçaõ de dependencia precisamos do construtor
