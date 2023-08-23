@@ -2,28 +2,18 @@
   "fotos": [
     {
       "url": "https://cdn.pixabay.com/photo/2023/08/11/10/13/goat-8183257_640.png",
-      "titulo": "Foto",
-      "id": 1
-    },
-    {
-      "url": "https://cdn.pixabay.com/photo/2023/07/10/06/52/trail-8117575_640.jpg",
-      "titulo": "Foto2",
-      "id": 2
-    },
-    {
-      "url": "https://cdn.pixabay.com/photo/2023/08/11/10/13/goat-8183257_640.png",
       "titulo": "foto3",
       "id": 3
     },
     {
-      "url": "https://cdn.pixabay.com/photo/2023/08/06/22/35/lifeguard-tower-8173913_640.jpg",
-      "titulo": "Fotro4",
-      "id": 4
+      "url": "https://cdn.pixabay.com/photo/2023/06/27/03/21/lizard-8091302_640.jpg",
+      "titulo": "Paisagem",
+      "id": 6
     },
     {
-      "url": "https://cdn.pixabay.com/photo/2023/08/11/12/41/capuchin-8183528_640.jpg",
-      "titulo": "Macaco",
-      "id": 5
+      "url": "https://cdn.pixabay.com/photo/2023/08/06/22/35/lifeguard-tower-8173913_640.jpg",
+      "titulo": "nnn",
+      "id": 7
     }
   ]
 }

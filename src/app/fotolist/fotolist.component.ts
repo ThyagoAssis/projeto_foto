@@ -18,6 +18,7 @@ export class FotolistComponent implements OnInit {
   
   /* Meu array de fotos */
   minhasFotos:Fotos[] = [];
+  btnButtom = "Excluir";
 
   /* Injeção da dependencia do httpclient 
     é uma boa pratica do Angular deixar o construtor somente para injeção de dependecia
@@ -28,4 +29,20 @@ export class FotolistComponent implements OnInit {
   ngOnInit(): void {
     this.http.get<Fotos[]>('http://localhost:3000/fotos').subscribe(caixinha => this.minhasFotos = caixinha );
   }
+
+  /* Método de excluir chamado pelo botão excluir */
+  deletar(id:any){
+    this.http.delete('http://localhost:3000/fotos/' + id).subscribe();
+
+    /* Definir um tempo de 2 segundo para atualizar a pagina */
+    setTimeout(this.refresh,2000);
+  }
+
+  /* Método de refresh */
+  refresh(){
+    /* Funçao JS - Atualiza a pagina */
+    location.reload();
+  }
+
+
 }

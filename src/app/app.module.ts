@@ -12,6 +12,7 @@ import { HeaderComponent } from './header/header.component';
 import { FotoComponent } from './foto/foto.component';
 import { FotolistComponent } from './fotolist/fotolist.component';
 import { FormularioComponent } from './formulario/formulario.component';
+import { UpdateComponent } from './update/update.component';
 
 
 /* Decorator - determina a função da classe */
@@ -21,7 +22,8 @@ import { FormularioComponent } from './formulario/formulario.component';
     HeaderComponent,
     FotoComponent,
     FotolistComponent,
-    FormularioComponent
+    FormularioComponent,
+    UpdateComponent
   ],
   imports: [
     BrowserModule,
