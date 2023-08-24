@@ -1,8 +1,18 @@
+<div class="container " style="margin-top: 150px;">
+    <h1 class="text-center"> Formulario para Edição</h1>
 
-<div class="container">
-    <p><strong>ID: </strong>{{imagem.id}}</p>
+<form #form="ngForm" (ngSubmit)="editar(form)">
 
-    <p><strong>Título: </strong>{{imagem.titulo}}</p>
+    <div class="form-group mt-3">
+        <label for="">Informe o endereço da Imagem: </label>
+        <input class="form-control" type="url" name="url" [ngModel]="imagem.url">
+    </div>    
 
-    <p><strong>Imagem: </strong></p><img [src]="imagem.url" alt="">
-</div>
+    <div class="form-group mt-3">
+        <label for="">Informe o titulo da Imagem: </label>
+        <input class="form-control" type="text" name="titulo" [ngModel]="imagem.titulo">
+    </div>
+    
+    <button class="btn btn-primary mt-3" type="submit">Atualizar</button>
+
+</form>
